@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto CV</title>
+      <link rel="stylesheet" href="css/estilos.css">
+
+    <!-- Iconos de fontawesome.com-->
+    <script src="https://kit.fontawesome.com/38df7efd18.js" crossorigin="anonymous"></script>
+       
+    <!-- Random User Generator https://randomuser.me/ -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+    <!-- Fuente Light300 de https://fonts.google.com/ -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet">
+    
+    <link rel="icon" type="image/x-icon" href="imagenes/icono de pagina.png">
+
+    <script src="js/funcionalidad.js"></script>
+</head>
+
+<body>
+    <div id="pagina">
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="#titInfoPersonal">INFORMACIÓN PERSONAL</a></li>
+                    <li><a href="#titExpLab">EXPERIENCIA LABORAL</a></li>
+                    <li><a href="#titExpLab">ESTUDIOS</a></li>
+                    <li><a href="#titCompetencias">CONOCIMIENTO</a></li>
+                    <li><a href="#titCursos">CAPACITACIONES</a></li>
+                    <li><a href="#titContactar">CONTACTO</a></li>
+                </ul>
+
+                <!--Cambio de visualización Modo Oscuro-->
+                <i title="Modo claro activo" id="modoVis" class="fa-solid fa-sun"></i>
+            </nav>
+
+            <section id="encabezado" class="encabezado">
+                <article id="perfil">
+                    <figure id="foto">
+                        <img src="" alt="Foto de perfil" id="fotoPerfil" />
+                    </figure>
+                </article>
+
+                <article id="redes">
+                    <figure title="Github Perfil de Usuario" class="redesContacto">
+                        <a href="https://github.com/" target="_blank">
+                            <img id="img-github" src="imagenes/github/github-mark.svg" class="imgRedes"
+                                alt="Gitgub logo">
+                        </a>
+                    </figure>
+                    <figure title="LinkedIn Perfil de Usuario" class="redesContacto">
+                        <a href="https://www.linkedin.com/" target="_blank">
+                            <img id="img-lin" src="imagenes/linked in/In-Blue-128.png" class="imgRedes"
+                                alt="LinkedIn logo">
+                        </a>
+                    </figure>
+                </article>
+                <article id="nombreTitulo">
+                    <h1 class="nombreTitulo" id="apellidoPersona"></h1>
+                    <h1 class="nombreTitulo" id="nombrePersona"></h1>
+                    <h4 class="nombreTitulo" id="profesionPersona">Desarrollador Frontend</h2>
+                </article>
+            </section>
+        </header>
+
+        <main id="cuerpo">
+            <section id="info" class="tematica">
+                <article id="titInfoPersonal" class="titulo">
+                    <i class="fa-solid fa-address-card iconoTitulo"></i>
+                    <h3>INFORMACIÓN PERSONAL</h3>
+                    <div class="fleVisibilidad" id="mostrarInfo">
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="fleVisibilidad" id="ocultarInfo">
+                        <i class="fa-solid fa-chevron-up"></i>
+                    </div>
+                </article>
+                <article class="datos">
+                    <p><span class="resaltar">Número:</span> <span id="identificacionPersona"></span></p>
+                    <p><span class="resaltar">Fecha de nacimiento:</span> <span id="nacimientoPersona"></span></p>
+                    <p><span class="resaltar">Ciudad:</span> <span id="residenciaPersona"></span></p>
+                    <p><span class="resaltar">Domicilio:</span> <span id="callePersona"></span></p>
+                    <p><span class="resaltar">Código postal:</span> <span id="codPostPersona"></p>
+                    <p><span class="resaltar">Zona horaria:</span> <span id="zonaHorariaPersona"></span></p>
+                    <p><span class="resaltar">Correo electrónico:</span> <span id="correoElectPersona"></span></p>
+                    <p><span class="resaltar">Teléfono móvil:</span> <span id="telMovilPersona"></span></p>
+                    <p><span class="resaltar">Teléfono fijo:</span> <span id="telFijoPersona"></span></p>
+                </article>
+            </section>
+
+            <section id="expLab" class="tematica">
+                <article id="titExpLab" class="titulo">
+                    <i class="fa-solid fa-briefcase iconoTitulo"></i>
+                    <h3>EXPERIENCIA LABORAL</h3>
+                    <div class="fleVisibilidad" id="mostrarExpLab">
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="fleVisibilidad" id="ocultarExpLab">
+                        <i class="fa-solid fa-chevron-up"></i>
+                    </div>
+                </article>
+                <article>
+                    <ul class="datos">
+                        <li>
+                            <p><span class="resaltar">2023 - actualidad:</span> Instalador de cámaras de seguridad</p>
+                        </li>
+                        <li>
+                            <p><span class="resaltar">2022 - 2016:</span> Coordinador de miembros BNI Impronta</p>
+                        </li>
+                        <li>
+                            <p><span class="resaltar">2015 - 2014:</span> Soporte técnico de PC</p>
+                        </li>
+                    </ul>
+                </article>
+            </section>
+
+            <section id="estudios" class="tematica">
+                <article id="titEstudios" class="titulo">
+                    <i class="fa-solid fa-graduation-cap iconoTitulo"></i>
+                    <h3>ESTUDIOS</h3>
+                    <div class="fleVisibilidad" id="mostrarEstudios">
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="fleVisibilidad" id="ocultarEstudios">
+                        <i class="fa-solid fa-chevron-up"></i>
+                    </div>
+                </article>
+                <article class="datos">
+                    <ul>
+                        <li>
+                            <p><span class="resaltar">2do año Comercialización UTN:</span> 2015</p>
+                        </li>
+                        <li>
+                            <p><span class="resaltar">Secundario:</span> egresado (1989)</p>
+                        </li>
+                        <li>
+                            <p><span class="resaltar">Primario:</span> egresado (1984) </p>
+                        </li>
+                    </ul>
+                </article>
+            </section>
+
+            <section id="competencias" class="tematica">
+                <article id="titCompetencias" class="titulo">
+                    <i class="fa-solid fa-laptop-code iconoTitulo"></i>
+                    <h3>CONOCIMIENTO</h3>
+                    <div class="fleVisibilidad" id="mostrarComp">
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="fleVisibilidad" id="ocultarComp">
+                        <i class="fa-solid fa-chevron-up"></i>
+                    </div>
+                </article>
+                <article class="datos">
+                    <p>WINDOWS: <progress class="barraProgreso" max="100" value="90"></progress></p>
+                    <p>VBA: <progress class="barraProgreso" max="100" value="70"></progress></p>
+                    <p>HTML: <progress class="barraProgreso" max="100" value="20"></progress></p>
+                </article>
+            </section>
+
+            <section id="cursos" class="tematica">
+                <article id="titCursos" class="titulo">
+                    <i class="fa-solid fa-chalkboard-user iconoTitulo"></i>
+                    <h3>EDUCACION COMPLEMENTARIA</h3>
+                    <div class="fleVisibilidad" id="mostrarCursos">
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="fleVisibilidad" id="ocultarCursos">
+                        <i class="fa-solid fa-chevron-up"></i>
+                    </div>
+                </article>
+                <article>
+                    <ul class="datos">
+                        <li>
+                            <p><span class="resaltar">Ticmas / Argentina Programa introducción al HTML:</span> 2023 En progreso</p>
+                        </li>
+                        <li>
+                            <p><span class="resaltar">VBA para Excel 365:</span> Completado 2022 </p>
+                        </li>
+                    </ul>
+                </article>
+            </section>
+            <section id="contactar" class="tematica">
+                <article  id="titContactar" class="titulo">
+                    <i class="fa-solid fa-envelope iconoTitulo"></i>
+                    <h3>CONTACTO</h3>
+                    <div class="fleVisibilidad" id="mostrarContactar">
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="fleVisibilidad" id="ocultarContactar">
+                        <i class="fa-solid fa-chevron-up"></i>
+                    </div>
+                </article>
+                <article>
+                    <form id="formularioContactar">
+                        <label for="nombreCont">Nombre:</label>
+                        <input type="text" name="nombreCont" id="nombreCont" class="cajaFormulario" required placeholder="Juan"><br>
+
+                        <label for="apellidoCont">Apellido:</label>
+                        <input type="text" name="apellidoCont" id="apellidoCont" class="cajaFormulario" required placeholder="García"><br>
+
+                        <label for="correoElecCont">Correo electrónico</label>
+                        <input type="email" name="correoElecCont" id="correoElecCont" class="cajaFormulario" required placeholder="correo@ejemplo.com"><br>
+
+                        <label for="asuntoCont">Asunto:</label>
+                        <input type="text" name="asuntoCont" id="asuntoCont" class="cajaFormulario" required placeholder="Título del mensaje"><br>
+
+                        <textarea name="comentariosCont" id="comentariosCont" class="cajaFormulario" cols="50" rows="8" placeholder="Escriba su mensaje"></textarea><br>
+                        <input type="submit" id="enviarFormulario" class="cajaFormulario" name="Enviar" value="Enviar">
+                    </form>
+                </article>
+            </section>
+        </main>
+
+        <i id="btnToTop" title='Ir al inicio' class="fa-solid fa-arrow-up flecha"></i>
+
+        <footer>
+            Front end Academy - 2022 / Ticmas 2023 /
+            ARGENTINA PROGRAMA 4.0.
+            Creador Bruno Di Benedetto
+            Repositorio GitHub.com
+            <p>Consulte el <a href="https:bruno.com/andres-happy/Proyecto-Final-Primeros-pasos-del-desarrollo-frontend"  target="_blank"> repositorio</a> para acceder a los archivos.</p>
+        </footer>
+    </div>
+    
+
+</body>
+
+</html>
