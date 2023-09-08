@@ -150,6 +150,7 @@ modo.addEventListener ("click", function(){
     } else {
         modo.className="fa-solid fa-sun";
         modo.title="Modo claro activo";
+        console.error("El elemento con ID 'modoVis' no fue encontrado.");
         document.documentElement.style.setProperty('--color-1', '#048A81');
         document.documentElement.style.setProperty('--color-2', '#6bada9');
         document.documentElement.style.setProperty('--color-3', '#54C6EB');
