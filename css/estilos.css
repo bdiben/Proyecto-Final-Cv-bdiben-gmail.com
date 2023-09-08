@@ -135,7 +135,7 @@ nav ul li a{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-   
+    margin-right: 20px;
 }
 
 /* clase de figure que contiene las img */
